@@ -1,0 +1,75 @@
+package org.firstinspires.ftc.teamcode;
+
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
+@TeleOp(name = "MarqeeDemo")
+public class Marqee_Demo_Tele extends LinearOpMode {
+    private DcMotor LMotor1, RMotor1, LMotor2, RMotor2;
+    double speed = .6;
+    double slowspeed = .3;
+    double fastspeed = .6 * 0.8;
+    public void runOpMode() {
+        LMotor1 = hardwareMap.get(DcMotor.class, "LM1");
+        RMotor1 = hardwareMap.get(DcMotor.class, "RM1");
+        LMotor2 = hardwareMap.get(DcMotor.class, "LM2");
+        RMotor2 = hardwareMap.get(DcMotor.class, "RM2");
+        RMotor1.setDirection(DcMotorSimple.Direction.REVERSE);
+        RMotor1.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        RMotor2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        LMotor1.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        LMotor2.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
+        waitForStart();
+        while (opModeIsActive()) {
+            speed = .6;
+            LMotor1.setPower(0);
+            RMotor1.setPower(0);
+            LMotor2.setPower(0);
+            RMotor2.setPower(0);
+            //fowards
+            if (gamepad1.left_stick_y > 0.1){
+                LMotor1.setPower(fastspeed);
+                RMotor1.setPower(fastspeed);
+                LMotor2.setPower(speed);
+                RMotor2.setPower(speed);
+            }
+            if (gamepad1.left_stick_y < -0.1){
+                LMotor1.setPower(-fastspeed);
+                RMotor1.setPower(-fastspeed);
+                LMotor2.setPower(-speed);
+                RMotor2.setPower(-speed);
+            }
+            //straffs
+            if (gamepad1.right_stick_x < -0.1) {
+                speed = speed * 1.2;
+                LMotor1.setPower(fastspeed);
+                RMotor1.setPower(-fastspeed);
+                LMotor2.setPower(-speed);
+                RMotor2.setPower(speed);
+            }
+            if (gamepad1.right_stick_x > 0.1) {
+                speed = speed * 1.2;
+                LMotor1.setPower(-fastspeed);
+                RMotor1.setPower(fastspeed);
+                LMotor2.setPower(speed);
+                RMotor2.setPower(-speed);
+            }
+            //turns
+            if (gamepad1.right_bumper) {
+                LMotor1.setPower(-speed);
+                RMotor1.setPower(speed);
+                LMotor2.setPower(-speed);
+                RMotor2.setPower(speed);
+            }
+            if (gamepad1.left_bumper) {
+                LMotor1.setPower(speed);
+                RMotor1.setPower(-speed);
+                LMotor2.setPower(speed);
+                RMotor2.setPower(-speed);
+            }
+
+
+        }
+    }
+}

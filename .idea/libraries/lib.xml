@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/dyn4j-4.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/javassist-3.21.0-GA.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/road-runner-core-0.5.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/dyn4j-4.1.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/reflections-0.9.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/guava-20.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/Jamepad.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/pedro_modified.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/road-runner-0.5.6-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/virtual_robot-master/lib/EasyOpenCV_v1.5.0_OBJ_bundle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
