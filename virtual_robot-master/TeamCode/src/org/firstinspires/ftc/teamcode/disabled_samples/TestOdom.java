@@ -3,7 +3,7 @@ package org.firstinspires.ftc.teamcode.disabled_samples;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 
-import org.firstinspires.ftc.teamcode.EncBot;
+import org.firstinspires.ftc.teamcode.old_stuff.EncBot;
 
 /**
  * TeleOp op mode to test odometry with three "dead-wheel" encoders. This op mode will work with
