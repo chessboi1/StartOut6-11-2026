@@ -9,7 +9,7 @@ public class vishaalDrive {
     DcMotor rRight, rLeft, fRight, fLeft, flywheel1, flywheel2, intake1, intake2;
     Servo load;
     public void init(HardwareMap hwMap) {
-        rRight = hwMap.get(DcMotor.class, "NAME");  // defining motors
+        rRight = hwMap.get(DcMotor.class, "NAME");  // defining motors idk motor names
         rLeft = hwMap.get(DcMotor.class, "NAME");
         fRight = hwMap.get(DcMotor.class, "NAME");
         fLeft = hwMap.get(DcMotor.class, "NAME");

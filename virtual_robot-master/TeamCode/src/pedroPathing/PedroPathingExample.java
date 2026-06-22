@@ -21,11 +21,11 @@ public class PedroPathingExample extends LinearOpMode {
         LMotor2 = hardwareMap.get(DcMotor.class, "Left_Motor2");
         RMotor2 = hardwareMap.get(DcMotor.class, "Right_Motor2");
         RMotor1.setDirection(DcMotorSimple.Direction.REVERSE);
-        follower = new Follower();
+        follower = new Follower[];
         localizer = new YourLocalizerClass();
         waitForStart();
-        while (opModeIsActive()) {
-            pass
+        while (opModeIsActive()){
+
         }
     }
 }
